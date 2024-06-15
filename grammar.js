@@ -63,10 +63,7 @@ module.exports = grammar({
     go_directive: ($) => seq("go", $.go_version, "\n"),
 
     toolchain_directive: ($) =>
-      seq(
-        "toolchain",
-        field('name', $.toolchain_name),
-      ),
+      seq("toolchain", field("name", $.toolchain_name)),
 
     toolchain_name: ($) => $._string_or_ident,
 
@@ -131,6 +128,6 @@ module.exports = grammar({
         "\n"
       ),
 
-    comment: ($) => seq("//", /.*/),
+    comment: ($) => token(seq("//", /.*/)),
   },
 });
