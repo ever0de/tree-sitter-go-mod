@@ -1,10 +1,5 @@
 [
   {
-    "type": "comment",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "exclude_directive",
     "named": true,
     "fields": {},
@@ -134,6 +129,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "comment",
+          "named": true
+        },
         {
           "type": "replace_spec",
           "named": true
@@ -342,10 +341,6 @@
     "named": false
   },
   {
-    "type": "//",
-    "named": false
-  },
-  {
     "type": "=>",
     "named": false
   },
@@ -356,6 +351,10 @@
   {
     "type": "]",
     "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
   },
   {
     "type": "escape_sequence",

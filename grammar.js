@@ -93,7 +93,6 @@ module.exports = grammar({
       seq(
         "replace",
         choice(
-          $.comment,
           $.replace_spec,
           seq("(", "\n", repeat(choice($.replace_spec, $.comment)), ")", "\n")
         )
